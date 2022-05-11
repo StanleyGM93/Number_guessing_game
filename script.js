@@ -11,6 +11,12 @@ const getAbsoluteDistance = (numberA, numberB) => {
     return Math.abs(numberA - numberB);
 }
 
+const checkUserInput = input => {
+    if (input < 0 || input > 9) {
+        alert('Please input a number between 0 - 9');
+    }
+}
+
 const compareGuesses = (humanGuess, computerGuess, targetNumber) => {
     let humanGuessDifference = getAbsoluteDistance(humanGuess, targetNumber);
     let computerGuessDifference = getAbsoluteDistance(computerGuess, targetNumber);

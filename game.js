@@ -14,6 +14,8 @@ const guessButton = document.getElementById('guess');
 const nextRoundButton = document.getElementById('next-round')
 
 guessButton.addEventListener('click', () => {
+  // Check user input 
+  checkUserInput(humanGuessInput.value);
   // Generate the target value
   target = generateTarget();
   // Retrieve the player's guess
